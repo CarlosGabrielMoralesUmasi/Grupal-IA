@@ -3,7 +3,7 @@ PRESENTACION DE TRABAJOS GRUPALES DEL CURSO DE IA
 
 ## POR:
 ### -Javier Oswaldo Alvarez Reyes
-### -Carlos Morales
+### -Carlos Gabriel Morales Umasi
 ### -Rony Rodrigo Sicos Barrera
 ### -Pablo Cesar Yucra Ccolqque
 
