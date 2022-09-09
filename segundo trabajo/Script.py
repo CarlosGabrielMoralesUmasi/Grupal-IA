@@ -27,5 +27,54 @@ def CrearMalla(N):
             boton = tk.Button(master=frame, text="Boton", command= lambda: CambiarColor(frame))
             boton.pack(padx=5, pady=5)
 
+class Node:
+    def __init__(self, data):
+        self.left = None
+        self.right = None
+        self.data = data
+
+    def insert(self, data):
+        if self.data:
+            if data < self.data:
+                if self.left is None:
+                    self.left = Node(data)
+                else:
+                    self.left.insert(data)
+            elif data > self.data:
+                if self.right is None:
+                    self.right = Node(data)
+                else:
+                    self.right.insert(data)
+        else:
+            self.data = data
+
+ 
+    def PrintTree(self):
+        if self.left:
+            self.left.PrintTree()
+        print( self.data),
+        if self.right:
+            self.right.PrintTree()
+            
+
+
+
+    def InOrder(self):
+        if self.left:
+            self.left.InOrder()
+        print( self.data),
+        if self.right:
+            self.right.InOrder()
+
+#imprimir el arbol
+root = Node(12)
+root.insert(6)
+root.insert(14)
+root.insert(3)
+root.insert(8)
+root.insert(13)
+root.insert(15)
+
+root.PrintTree()
 CrearMalla(5)
 window.mainloop()
